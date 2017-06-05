@@ -2,42 +2,39 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-import MsgBox from './MsgBox';
+import ListView from './ListView';
+
 // let yeomanImage = require('../images/yeoman.png');
 
 class AppComponent extends React.Component {
-  	
-	 constructor(props) {
+
+	  constructor(props) {
 	    super(props);
 	    this.state = {data:[]};
 	  }
-
-
-	tapBtnEvent(){
+	  tapBtnEvent(){
   		console.log("The link was clicked!!");
-  		
-  		var list = this.state.data;
-  		list.push(<MsgBox/>);
-  		this.setState({data:list});
+      this.setState((prevState)=>({
+          data:prevState.data.push({name:"charly" , msg: "hello"})
+      }));
+  	}
+  	componentDidMount(){
 
-  		
+  		this.addTouchEvent()
   	}
 
   	render() {
 
 	    return (
-	      	<div id = "app" ref={(input)=>(this.div = input)}>
-	      		{this.state.data}
-
-	      	<button type="button" id="tapBtn" onClick={this.tapBtnEvent.bind(this)}>TapTapTap</button>
-
-	      	</div>	
-	      		
+	      	<div id = "app">
+            <ListView items = {this.state.data}/>
+	      		<button type="button" id="tapBtn" onClick={this.tapBtnEvent.bind(this)}>TapTapTap</button>
+	      	</div>
 	    );
   }
 }
 
-AppComponent.defaultProps = { 
+AppComponent.defaultProps = {
 };
 
 export default AppComponent;
