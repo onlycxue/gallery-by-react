@@ -2,9 +2,6 @@ import React from 'react';
 
 class MsgBox extends React.Component{
 
-
-
-
 	render(){
 		return(
 			<div className="msgBox"> 
