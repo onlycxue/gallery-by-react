@@ -1,35 +1,42 @@
 /* Base Application Styles */
 body {
-  color: #fff;
-  background: #666;
+     color: #fff;
+    background: #666;
 }
 
 .index {
-  margin: 40px auto;
-  border-radius: 4px;
-  background: #fff;
-  display: block;
+    margin: 40px auto;
+    border-radius: 4px;
+    background: #fff;
+    display: block;
 }
 
 #app{
-  width:100%;
-  height: 100%; 
-  overflow-y:visible;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    border: 2px solid blue;
+}
+.ListView{
+    width: 100%;
+    height: 80%;
+    overflow-y:auto;
+    border: 2px solid red;
 }
 .msgBox{
-  background: red;
-  margin:25px;
+    background: red;
+    margin:25px;
 
 }
 
 #tapBtn{
-  position: fixed;
-  color:red;
+    position: fixed;
+    color:red;
 /*  width:100%;
   height: 200px;*/
-  height: 200px;
-  width: 100%;
-  bottom: 10px;
+    display:block;
+    height: 20%;
+    width: 100%;
 }
 
 /*.index .notice {

@@ -9,14 +9,25 @@ import ListView from './ListView';
 class AppComponent extends React.Component {
 
 	  constructor(props) {
-	    super(props);
-	    this.state = {data:[]};
+	      super(props);
+          this.state = {data:[]};
+          // this.story=[
+          //     {name:"Lilei",msg:""}
+          //
+          //
+          // ]
+
+
+
 	  }
 	  tapBtnEvent(){
   		console.log("The link was clicked!!");
-      this.setState((prevState)=>({
-          data:prevState.data.push({name:"charly" , msg: "hello"})
-      }));
+      this.setState((prevState)=> {
+
+          prevState.data.push({name: "charly", msg: "hello"})
+          this.state.data = prevState;
+      })
+      console.log(this.state.data);
   	}
   	componentDidMount(){
 
@@ -27,8 +38,8 @@ class AppComponent extends React.Component {
 
 	    return (
 	      	<div id = "app">
-            <ListView items = {this.state.data}/>
-	      		<button type="button" id="tapBtn" onClick={this.tapBtnEvent.bind(this)}>TapTapTap</button>
+                <ListView items={this.state.data}/>
+                <button type="button" id="tapBtn" onClick={this.tapBtnEvent.bind(this)}>TapTapTap</button>
 	      	</div>
 	    );
   }
