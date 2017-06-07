@@ -4,7 +4,7 @@
 
 import React from 'react'
 
-class NotFoundPage extends React.component{
+class NotFoundPage extends React.Component{
 
 
     render(){

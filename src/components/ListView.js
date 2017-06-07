@@ -23,7 +23,7 @@ class ListView extends React.Component{
     render(){
       return(
           <div className = "ListView" ref={(input)=>(this.div = input)}>
-             {this.props.items.map((item)=>(<MsgBox name={item.name} msg={item.msg} />))}
+             {this.props.items.map((item,idx)=>(<MsgBox name={item.name} msg={item.msg} key={idx}/>))}
           </div>
       );
     }

@@ -3,7 +3,7 @@
  */
 import React from 'react'
 
-class StoryEditer extends React.component{
+class StoryEditer extends React.Component{
 
 
     render(){

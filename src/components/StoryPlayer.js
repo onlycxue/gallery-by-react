@@ -5,7 +5,6 @@ import React from 'react'
 
 import ListView from './ListView'
 
-
 class StoryPlayer extends React.Component{
 
 
@@ -30,9 +29,8 @@ class StoryPlayer extends React.Component{
 
         return  (
             <div className= "player" >
-
                 <ListView items = {this.state.data}/>
-                <button type="button" id = "tapBtn" onClick={this.tapBtnEven.bind(this)}> taptap </button>
+                <button type="button" id = "tapBtn" onClick={this.tapBtnEvent.bind(this)}> taptap </button>
 
             </div>
         );

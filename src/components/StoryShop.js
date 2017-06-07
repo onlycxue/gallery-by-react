@@ -2,18 +2,15 @@
  * Created by charly on 17/6/6.
  */
 import React from 'react'
+import ShopItemComp from './ShopItemComp'
 
-class StoryShop extends React.component{
-
+class StoryShop extends React.Component{
 
     render(){
-
         return(
-            <h1> StoryShop </h1>
+           <ShopItemComp/>
         );
-
     }
-
 }
 
 StoryShop.defaultProps={

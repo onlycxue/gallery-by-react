@@ -16,9 +16,6 @@ class AppComponent extends React.Component {
           //
           //
           // ]
-
-
-
 	  }
 	  tapBtnEvent(){
   		console.log("The link was clicked!!");

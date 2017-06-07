@@ -3,7 +3,7 @@
  */
 import React from 'react'
 
-class LoginPopup extends React.component{
+class LoginPopup extends React.Component{
 
 
     render(){

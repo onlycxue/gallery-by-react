@@ -3,7 +3,8 @@
  */
 
 import React from 'react'
-import {Router,Route,IndexRoute,Redirect} from 'react-router'
+// import {Redirect} from 'react-router'
+import {BrowserRouter as Router,Route,Redirect,Switch} from 'react-router-dom'
 
 import StoryPlayer from '../components/StoryPlayer'
 import StoryEditer from '../components/StoryEditer'
@@ -13,14 +14,14 @@ import NotFoundPage from '../components/NotFoundPage'
 
 const RootRoter=(
     <Router>
-        <Route exact path="/" render={()=>(<Redirect to="/StoryShop"/>)}/>
-        <Route path="/StoryPlayer" component={StoryPlayer}/>
-        <Route path="/StoryEditer" component={StoryEditer}/>
-        <Route path="/StoryShop" component={StoryShop}/>
-        <Route path="/LoginPopup" component={LoginPopup}/>
-            <Route path="404" component={NotFoundPage}/>
-
-            <Redirect from="*" to = '404'/>
+        <Switch>
+            <Route exact path="/" render={()=>(<Redirect to="/storyshop"/>)}/>
+            <Route path="/storyeditor" component={StoryEditer}/>
+            <Route path="/storyshop" component={StoryShop}/>
+            <Route path="/storyplayer" component={StoryPlayer}/>
+            <Route path="/login" component={LoginPopup}/>
+            <Route component={NotFoundPage}/>
+        </Switch>
     </Router>
 )
 
