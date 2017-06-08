@@ -6,8 +6,8 @@ class ShopItemComp extends React.Component{
 
     render(){
         return(
-           <div>
-               <img src="./images/shopitem_bg.png"></img>>
+           <div className="shopitem">
+               <img className="shopitem_img" src="./images/yeoman.png"></img>
                <p className="shopitem_desc">{this.props.desc}</p>
                <p className="shopitem_hot">{this.props.hot}</p>
            </div>
@@ -16,7 +16,7 @@ class ShopItemComp extends React.Component{
 }
 
 ShopItemComp.defaultProps={
-    desc:"这是一个描述",
+    desc:"这将是一个恐怖故事 不拉不拉",
     hot:"100000tap"
 };
 

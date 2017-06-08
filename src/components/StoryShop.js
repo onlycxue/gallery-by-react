@@ -3,12 +3,23 @@
  */
 import React from 'react'
 import ShopItemComp from './ShopItemComp'
+import ShopItemAdd from './ShopItemAdd'
 
 class StoryShop extends React.Component{
 
     render(){
         return(
-           <ShopItemComp/>
+            <div className="storyshop" >
+                <ShopItemComp/>
+                <ShopItemComp/>
+                <ShopItemComp/>
+                <ShopItemComp/>
+                <ShopItemComp/>
+                <ShopItemComp/>
+                <ShopItemComp/>
+                <ShopItemComp/>
+                <ShopItemAdd/>
+            </div>
         );
     }
 }
