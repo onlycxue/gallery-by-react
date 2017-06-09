@@ -18,7 +18,6 @@ class StoryShop extends React.Component{
                 <ShopItemComp/>
                 <ShopItemComp/>
                 <ShopItemComp/>
-                <ShopItemAdd/>
             </div>
         );
     }

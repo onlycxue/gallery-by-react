@@ -7,3 +7,11 @@
     margin: 10px;
 
 }
+.tips{
+    /*position: absolute;*/
+    width:100%;
+    height: 20px;
+    text-align: center;
+    /*border: 2px red solid;*/
+    margin-top: 75px;
+}

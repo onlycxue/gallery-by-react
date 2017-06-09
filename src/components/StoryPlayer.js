@@ -24,6 +24,7 @@ class StoryPlayer extends React.Component{
     }
     componentDidMount(){
         // this.addTouchEvent();
+        console.log(this.props.match.url);
     }
     render(){
 
