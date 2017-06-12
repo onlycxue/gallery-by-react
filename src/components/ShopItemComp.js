@@ -22,7 +22,7 @@ class ShopItemComp extends React.Component{
 
     render(){
         if (this.state.redirect){
-            return <Redirect push to={{pathname : "/storyplayer/1"}}/>
+            return <Redirect push to={{pathname : "/storyplayer/" + this.props.id}}/>
         }
         return(
            <div className="shopitem" onClick={this.onClickedEvent.bind(this)}>
@@ -36,7 +36,8 @@ class ShopItemComp extends React.Component{
 
 ShopItemComp.defaultProps={
     desc:"这将是一个恐怖故事 不拉不拉",
-    hot:"100000tap"
+    hot:"100000tap",
+    id:""
 };
 
 export default ShopItemComp

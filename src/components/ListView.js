@@ -21,12 +21,22 @@ class ListView extends React.Component{
 // <MsgBox name={item.name} msg={item.msg} />
 // ))}
     render(){
+
+
       return(
-          <div className = "ListView" ref={(input)=>(this.div = input)}>
+          <div className = "ListView" ref="divList">
              {this.props.items.map((item,idx)=>(<MsgBox name={item.name} msg={item.msg} key={idx}/>))}
           </div>
       );
     }
+
+    componentDidUpdate(){
+        if (this.refs.divList){
+            this.refs.divList.scrollTop = this.refs.divList.scrollHeight;
+        }
+    }
+
+
 }
 
 ListView.defaultProps={

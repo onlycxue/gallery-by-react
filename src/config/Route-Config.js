@@ -22,7 +22,7 @@ const RootRoter=(
             <Route exact path="/" render={()=>(<Redirect to="/storyshop"/>)}/>
             <Route path="/storyeditor" component={StoryEditer}/>
             <Route path="/storyshop" component={StoryShop}/>
-            <Route path="/storyplayer/:1234567890" component={StoryPlayer}/>
+            <Route path="/storyplayer/:1234567890abcdef" component={StoryPlayer}/>
             <Route path="/login" component={LoginPopup}/>
             <Route path="/test/:1234567890" component={User}/>
             <Route component={NotFoundPage}/>
